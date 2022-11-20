@@ -14,7 +14,7 @@ sudo apt install -y ./discord.deb
 rm -rf ./discord-*.deb
 echo -e "${c}Installing Anaconda Distribution..."; $r
 curl -L "https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh" -o anacondaInstallScript.sh
-chmod ./anacondaInstallScript.sh
+chmod +x ./anacondaInstallScript.sh
 ./anacondaInstallScript.sh
 echo -e "${c}Installing Steam..."; $r
 curl -L "https://repo.steampowered.com/steam/archive/precise/steam_latest.deb" -o steam_latest.deb
