@@ -12,6 +12,7 @@ echo -e "${c}Installing Discord..."; $r
 curl -L "https://discord.com/api/download?platform=linux&format=deb" -o discord.deb
 sudo apt install -y ./discord.deb
 rm -rf ./discord-*.deb
+discord &
 echo -e "${c}Installing Anaconda Distribution..."; $r
 curl -L "https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh" -o anacondaInstallScript.sh
 chmod +x ./anacondaInstallScript.sh
