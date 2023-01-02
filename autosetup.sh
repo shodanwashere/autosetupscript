@@ -3,7 +3,10 @@
 c='\e[32m'
 r='tput sgr0'
 
-echo -e "${c}We need higher privilege for package installation..."; $r
+if [ "$EUID" -ne 0 ]
+  then echo echo -e "${c}We need higher privilege. Please run as root."; $r
+  exit
+fi
 sudo apt update
 echo -e "${c}Performing upgrade before installing more packages..."; $r
 sudo apt upgrade -y
