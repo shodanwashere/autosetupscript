@@ -4,8 +4,8 @@ c='\e[32m'
 r='tput sgr0'
 
 if [ "$EUID" -ne 0 ]
-  then echo echo -e "${c}We need higher privilege. Please run as root."; $r
-  exit
+  then echo -e "${c}We need higher privilege."; $r
+  echo -e "${c}You will be asked to input your user password."; $r
 fi
 sudo apt update
 echo -e "${c}Performing upgrade before installing more packages..."; $r
